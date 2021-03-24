@@ -32,5 +32,5 @@ def employee_arrival_report():
             result.append((surname, name, middle_name, positon, time_in))
             row_for_write += 1
 
-    result = sorted(result, key=lambda x: x[3])
+    result = sorted(result, key=lambda x: x[4])
     return result
