@@ -6,8 +6,10 @@ Python программа, которая принимает файл excel сф
 3. Выделить тех, кто опоздал.
 
 Исходная таблица:
-![image](https://user-images.githubusercontent.com/71211957/112327850-97f1de00-8cd7-11eb-8f32-a682611ca04e.png)
+![image](https://user-images.githubusercontent.com/71211957/112328900-8e1caa80-8cd8-11eb-8810-c918817960c1.png)
+
 
 Результат работы программы:
-![image](https://user-images.githubusercontent.com/71211957/112327952-adff9e80-8cd7-11eb-883e-4d0b7285914f.png)
+![image](https://user-images.githubusercontent.com/71211957/112329146-c328fd00-8cd8-11eb-8b75-868f522196ce.png)
+
 
