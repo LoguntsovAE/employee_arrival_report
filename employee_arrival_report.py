@@ -1,7 +1,14 @@
 import openpyxl
+import PySimpleGUI as sg
+
+filename = sg.popup_get_file(
+    message='Загрузите excel файл для обработки',
+    size=(80, 100),
+)
 
 # Открывает excel файл, в котором лежит таблица с данными
-wb_with_table = openpyxl.load_workbook('test_table.xlsx')
+# wb_with_table = openpyxl.load_workbook('test_table.xlsx')
+wb_with_table = openpyxl.load_workbook(filename=filename)
 work_sheet = wb_with_table.active
 
 # Заголовок таблицы
