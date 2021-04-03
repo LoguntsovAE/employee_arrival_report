@@ -1,5 +1,6 @@
 import openpyxl
 import PySimpleGUI as sg
+from operator import itemgetter
 
 filename = sg.popup_get_file(
     message='Загрузите excel файл для обработки',
@@ -39,5 +40,5 @@ def employee_arrival_report():
             result.append((surname, name, middle_name, positon, time_in))
             row_for_write += 1
 
-    result = sorted(result, key=lambda x: x[4])
+    result = sorted(result, key=itemgetter(3, 0))
     return result
