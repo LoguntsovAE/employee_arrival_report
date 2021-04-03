@@ -3,6 +3,7 @@
 
 import os
 
+from datefinder import find_dates
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill
 from openpyxl.styles import Border, Side
@@ -56,8 +57,11 @@ for row, employee in enumerate(employee_arrival_report()):
         if employee[4] > '9:00:00':
             cell.fill = PatternFill(bgColor='FF6D6D', fill_type='gray0625')
 
-
 # Из заголовка таблицы получаем название для файла
-new_file_name = title[-10:]
+dates = list(find_dates(title))
+fd = dates[0].timetuple() # форматированная дата
+DayMonthYear = [fd.tm_mday, fd.tm_mon, fd.tm_year]
+date = [str(item) for item in DayMonthYear]
+new_file_name = '.'.join(date) # дата = название файла
 
 wb.save(work_directory + f'/{new_file_name}.xlsx')
